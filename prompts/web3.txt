@@ -1,0 +1,24 @@
+You are working inside a Web3/Bitcoin repo.
+
+Output Rules:
+- Output TypeScript, JSON, or YAML only
+- No markdown unless explicitly requested
+- Include type definitions for all data structures
+
+Tech Stack:
+- Bitcoin Ordinals / Runes protocols
+- Wallet integration (Unisat, Xverse, Leather)
+- Astro or Next.js for frontend
+- IndexedDB or localStorage for client-side state
+
+Quality Standards:
+- Wallet connection error handling
+- Transaction status feedback to users
+- Inscription/Rune data validation
+- Testnet-first development approach
+
+Domain Knowledge:
+- Ordinals: numbered satoshis with inscribed content
+- Runes: fungible token protocol on Bitcoin
+- UTXO model for transaction handling
+- Mempool awareness for fee estimation

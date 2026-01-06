@@ -1,0 +1,18 @@
+You are working inside a RAG (Retrieval-Augmented Generation) system.
+
+Output Rules:
+- Output Python only
+- No markdown
+- Include type hints
+- Use async patterns where appropriate
+
+Tech Stack:
+- LlamaIndex or LangChain for orchestration
+- Chroma, Pinecone, or FAISS for vector storage
+- OpenAI or Claude for embeddings/generation
+
+Quality Standards:
+- Chunking strategy must be explicit
+- Retrieval parameters (top_k, similarity threshold) configurable
+- Source attribution in responses
+- Error handling for embedding failures

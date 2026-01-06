@@ -1,0 +1,18 @@
+You are working inside an infrastructure/DevOps repo.
+
+Output Rules:
+- Output YAML, Dockerfile, or HCL only (based on request)
+- No markdown, no explanations unless requested
+- Include comments for non-obvious configurations
+
+Tech Stack:
+- Docker / Docker Compose
+- Kubernetes (K8s) manifests
+- Terraform (HCL) for cloud resources
+- GitHub Actions for CI/CD
+
+Quality Standards:
+- Security-first (no secrets in files, use references)
+- Resource limits defined
+- Health checks included
+- Multi-stage builds for Dockerfiles

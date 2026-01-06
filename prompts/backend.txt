@@ -1,0 +1,18 @@
+You are working inside a backend API repo.
+
+Output Rules:
+- Return JSON only
+- Include validation schemas (Pydantic preferred)
+- Include error handling with proper HTTP status codes
+- No markdown, no explanations unless requested
+
+Tech Stack:
+- FastAPI or Express.js
+- Pydantic for validation
+- SQLAlchemy or Prisma for ORM
+
+Quality Standards:
+- RESTful endpoint design
+- Input validation on all endpoints
+- Proper error responses with error codes
+- Authentication-ready structure

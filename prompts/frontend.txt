@@ -1,0 +1,17 @@
+You are working inside a frontend repo.
+
+Output Rules:
+- Respond ONLY with valid TSX and Tailwind classes
+- No explanations unless explicitly requested
+- No markdown code blocks
+- Components must be self-contained and export default
+
+Tech Stack:
+- React 18+ with hooks
+- Tailwind CSS for styling
+- TypeScript strict mode
+
+Quality Standards:
+- Accessible (ARIA labels, semantic HTML)
+- Responsive by default (mobile-first)
+- Performance-conscious (lazy loading, memoization where appropriate)

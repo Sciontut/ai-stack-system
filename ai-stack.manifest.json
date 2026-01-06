@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "name": "Generative AI Multi-Tool System",
+    "version": "1.1.0",
+    "owner": "your-github-handle",
+    "intent": "Repo-aware, format-locked, multi-agent AI system for full-stack product creation",
+    "primary_consumer": "Claude Code"
+  },
+  "capability_layers": {
+    "foundations": {
+      "purpose": "Conceptual grounding",
+      "tools": ["DeepLearning.AI", "FastAI", "Google ML Crash Course"]
+    },
+    "data": {
+      "purpose": "Data preprocessing & feature engineering",
+      "tools": ["Pandas", "NumPy", "HuggingFace Datasets", "spaCy", "Roboflow"]
+    },
+    "llm": {
+      "purpose": "Core reasoning and generation",
+      "models": ["Claude Sonnet", "GPT-4", "Gemini Pro", "Mistral Large"],
+      "constraints": ["repo_aware", "format_locked"]
+    },
+    "multimodal": {
+      "image": ["Midjourney", "FLUX", "Stable Diffusion"],
+      "video": ["Runway", "Kling", "Sora"],
+      "audio": ["ElevenLabs"]
+    },
+    "rag": {
+      "vector_dbs": ["Pinecone", "Weaviate", "Chroma", "FAISS"],
+      "orchestration": ["LangChain", "LlamaIndex"]
+    },
+    "agents": {
+      "tools": ["Abacus AI Deep Agent"],
+      "capabilities": ["full_stack_generation", "repo_execution", "instant_deploy"]
+    },
+    "deployment": {
+      "tools": ["FastAPI", "Docker", "Kubernetes", "Vercel", "Modal", "Gradio"]
+    },
+    "governance": {
+      "tools": ["OpenAI Moderation API", "IBM AI Fairness 360", "SHAP", "LIME"]
+    }
+  },
+  "execution_rules": {
+    "repo_aware": true,
+    "format_locked_outputs": true,
+    "no_markdown_by_default": true,
+    "single_format_per_response": true
+  }
+}

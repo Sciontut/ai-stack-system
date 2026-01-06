@@ -1,0 +1,38 @@
+{
+  "frontend_repo": {
+    "output_formats": ["html", "tsx", "css"],
+    "preferred_models": ["Claude Sonnet"],
+    "capabilities": ["ui_generation", "design_system_matching"],
+    "description": "React/Next.js frontend projects with Tailwind CSS"
+  },
+  "backend_repo": {
+    "output_formats": ["json", "sql"],
+    "preferred_models": ["Claude Sonnet"],
+    "capabilities": ["api_design", "validation", "auth"],
+    "description": "API-first backend services"
+  },
+  "fullstack_monorepo": {
+    "output_formats": ["tsx", "json", "sql"],
+    "preferred_models": ["Abacus AI Deep Agent"],
+    "capabilities": ["end_to_end_features"],
+    "description": "Unified frontend + backend in single repo"
+  },
+  "rag_repo": {
+    "output_formats": ["python", "json"],
+    "preferred_models": ["Claude Sonnet"],
+    "capabilities": ["retrieval", "grounded_generation"],
+    "description": "Retrieval-Augmented Generation pipelines"
+  },
+  "infra_repo": {
+    "output_formats": ["yaml", "dockerfile", "hcl"],
+    "preferred_models": ["Claude Sonnet"],
+    "capabilities": ["ci_cd", "infra_as_code"],
+    "description": "DevOps and infrastructure configuration"
+  },
+  "web3_repo": {
+    "output_formats": ["typescript", "json", "yaml"],
+    "preferred_models": ["Claude Sonnet"],
+    "capabilities": ["ordinals", "runes", "smart_contracts", "bitcoin_scripts"],
+    "description": "Bitcoin Ordinals, Runes, and decentralized applications"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "full_stack_feature": {
+    "description": "End-to-end feature generation from schema to UI",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "Abacus AI Deep Agent",
+        "input": "repo",
+        "output": "schema",
+        "notes": "Analyzes existing repo structure and generates data schema"
+      },
+      {
+        "step": 2,
+        "tool": "Claude Sonnet",
+        "input": "schema",
+        "output": "frontend_components",
+        "notes": "Generates TSX components with Tailwind styling"
+      },
+      {
+        "step": 3,
+        "tool": "FLUX",
+        "input": "component_specs",
+        "output": "visual_assets",
+        "notes": "Creates images, icons, and visual elements"
+      }
+    ]
+  },
+  "rag_application": {
+    "description": "Build retrieval-augmented generation pipeline",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "LlamaIndex",
+        "input": "documents",
+        "output": "vector_index",
+        "notes": "Chunks and embeds documents into vector store"
+      },
+      {
+        "step": 2,
+        "tool": "Claude Sonnet",
+        "input": "query",
+        "output": "grounded_answer",
+        "notes": "Generates response grounded in retrieved context"
+      }
+    ]
+  },
+  "api_first_backend": {
+    "description": "Generate API endpoints with validation",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "Claude Sonnet",
+        "input": "requirements",
+        "output": "openapi_spec",
+        "notes": "Creates OpenAPI 3.0 specification"
+      },
+      {
+        "step": 2,
+        "tool": "Claude Sonnet",
+        "input": "openapi_spec",
+        "output": "fastapi_routes",
+        "notes": "Generates FastAPI route handlers"
+      }
+    ]
+  },
+  "web3_dapp": {
+    "description": "Decentralized application with Bitcoin Ordinals/Runes",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "Claude Sonnet",
+        "input": "dapp_requirements",
+        "output": "architecture",
+        "notes": "Designs system architecture and data flow"
+      },
+      {
+        "step": 2,
+        "tool": "Claude Sonnet",
+        "input": "architecture",
+        "output": "frontend_components",
+        "notes": "Generates React/Astro components for wallet integration"
+      }
+    ]
+  }
+}

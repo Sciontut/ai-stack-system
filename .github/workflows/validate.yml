@@ -1,0 +1,26 @@
+name: Validate Configuration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          echo "Validating ai-stack.manifest.json..."
+          python3 -m json.tool ai-stack.manifest.json > /dev/null
+          
+          echo "Validating repo-capability-map.json..."
+          python3 -m json.tool config/repo-capability-map.json > /dev/null
+          
+          echo "Validating workflows.json..."
+          python3 -m json.tool config/workflows.json > /dev/null
+          
+          echo "✅ All JSON files are valid"

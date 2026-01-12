@@ -1,38 +1,56 @@
 {
   "frontend_repo": {
-    "output_formats": ["html", "tsx", "css"],
-    "preferred_models": ["Claude Sonnet"],
-    "capabilities": ["ui_generation", "design_system_matching"],
-    "description": "React/Next.js frontend projects with Tailwind CSS"
+    "allowed_outputs": ["TSX", "HTML", "CSS", "JSON", "SVG"],
+    "default_format": "TSX",
+    "tools": ["React", "Next.js", "Astro", "Tailwind", "Framer Motion"],
+    "conventions": {
+      "components": "PascalCase",
+      "files": "kebab-case",
+      "styling": "Tailwind utility classes",
+      "state": "Zustand or React hooks"
+    }
   },
   "backend_repo": {
-    "output_formats": ["json", "sql"],
-    "preferred_models": ["Claude Sonnet"],
-    "capabilities": ["api_design", "validation", "auth"],
-    "description": "API-first backend services"
+    "allowed_outputs": ["JSON", "SQL", "TypeScript", "YAML"],
+    "default_format": "JSON",
+    "tools": ["Supabase", "PostgreSQL", "Edge Functions", "Zod"],
+    "conventions": {
+      "api": "RESTful or tRPC",
+      "validation": "Zod schemas",
+      "errors": "Structured JSON responses",
+      "security": "RLS + JWT validation"
+    }
   },
-  "fullstack_monorepo": {
-    "output_formats": ["tsx", "json", "sql"],
-    "preferred_models": ["Abacus AI Deep Agent"],
-    "capabilities": ["end_to_end_features"],
-    "description": "Unified frontend + backend in single repo"
-  },
-  "rag_repo": {
-    "output_formats": ["python", "json"],
-    "preferred_models": ["Claude Sonnet"],
-    "capabilities": ["retrieval", "grounded_generation"],
-    "description": "Retrieval-Augmented Generation pipelines"
-  },
-  "infra_repo": {
-    "output_formats": ["yaml", "dockerfile", "hcl"],
-    "preferred_models": ["Claude Sonnet"],
-    "capabilities": ["ci_cd", "infra_as_code"],
-    "description": "DevOps and infrastructure configuration"
+  "design_repo": {
+    "allowed_outputs": ["CSS", "SVG", "JSON", "TSX", "Lottie JSON"],
+    "default_format": "CSS",
+    "tools": ["Figma", "Spline", "Tailwind", "Framer Motion", "GSAP", "Rive"],
+    "conventions": {
+      "naming": "BEM or utility-first",
+      "responsive": "Mobile-first breakpoints",
+      "accessibility": "WCAG 2.1 AA minimum",
+      "animation": "prefers-reduced-motion aware"
+    }
   },
   "web3_repo": {
-    "output_formats": ["typescript", "json", "yaml"],
-    "preferred_models": ["Claude Sonnet"],
-    "capabilities": ["ordinals", "runes", "smart_contracts", "bitcoin_scripts"],
-    "description": "Bitcoin Ordinals, Runes, and decentralized applications"
+    "allowed_outputs": ["TypeScript", "JSON", "YAML"],
+    "default_format": "TypeScript",
+    "tools": ["Unisat API", "Ordinals", "Runes", "Bitcoin"],
+    "conventions": {
+      "wallet": "Unisat integration",
+      "transactions": "Typed interfaces",
+      "api": "REST with proper error handling"
+    }
+  },
+  "mobile_repo": {
+    "allowed_outputs": ["TSX", "JSON"],
+    "default_format": "TSX",
+    "tools": ["Expo", "React Native", "NativeWind", "Zustand"],
+    "conventions": {
+      "navigation": "Expo Router",
+      "styling": "NativeWind (Tailwind)",
+      "state": "Zustand",
+      "backend": "Supabase"
+    }
   }
 }

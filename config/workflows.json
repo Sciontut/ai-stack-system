@@ -1,84 +1,130 @@
 {
-  "full_stack_feature": {
-    "description": "End-to-end feature generation from schema to UI",
+  "design_to_code": {
+    "id": "design-to-code",
+    "name": "Design to Code Pipeline",
+    "description": "Transform Figma designs into production React components",
+    "trigger": "manual",
     "steps": [
       {
         "step": 1,
-        "tool": "Abacus AI Deep Agent",
-        "input": "repo",
-        "output": "schema",
-        "notes": "Analyzes existing repo structure and generates data schema"
+        "agent": "Figma",
+        "action": "export_design_tokens",
+        "output": "design-tokens.json"
       },
       {
         "step": 2,
-        "tool": "Claude Sonnet",
-        "input": "schema",
-        "output": "frontend_components",
-        "notes": "Generates TSX components with Tailwind styling"
+        "agent": "Claude",
+        "action": "generate_components",
+        "input": "design-tokens.json",
+        "context": "prompts/design.txt",
+        "output_format": "TSX"
       },
       {
         "step": 3,
-        "tool": "FLUX",
-        "input": "component_specs",
-        "output": "visual_assets",
-        "notes": "Creates images, icons, and visual elements"
+        "agent": "Bug Bot",
+        "action": "review_pr",
+        "checks": ["accessibility", "security", "performance"]
+      },
+      {
+        "step": 4,
+        "agent": "Human",
+        "action": "final_review"
       }
     ]
   },
-  "rag_application": {
-    "description": "Build retrieval-augmented generation pipeline",
+  "secure_feature": {
+    "id": "secure-feature",
+    "name": "Secure Feature Development",
+    "description": "Full-stack feature with security at every stage",
+    "trigger": "manual",
     "steps": [
       {
         "step": 1,
-        "tool": "LlamaIndex",
-        "input": "documents",
-        "output": "vector_index",
-        "notes": "Chunks and embeds documents into vector store"
+        "agent": "Claude",
+        "action": "generate_schema",
+        "context": "prompts/security.txt",
+        "output_format": "SQL",
+        "includes": ["RLS policies"]
       },
       {
         "step": 2,
-        "tool": "Claude Sonnet",
-        "input": "query",
-        "output": "grounded_answer",
-        "notes": "Generates response grounded in retrieved context"
+        "agent": "Claude",
+        "action": "generate_api",
+        "output_format": "TypeScript",
+        "includes": ["input validation", "error handling"]
+      },
+      {
+        "step": 3,
+        "agent": "Claude",
+        "action": "generate_frontend",
+        "context": "prompts/frontend.txt",
+        "output_format": "TSX"
+      },
+      {
+        "step": 4,
+        "agent": "Bug Bot",
+        "action": "security_review",
+        "checks": ["sql_injection", "xss", "auth_bypass"]
       }
     ]
   },
-  "api_first_backend": {
-    "description": "Generate API endpoints with validation",
+  "quick_prototype": {
+    "id": "quick-prototype",
+    "name": "Quick Prototype",
+    "description": "Rapid MVP development for hackathons",
+    "trigger": "manual",
+    "mood": "fire",
     "steps": [
       {
         "step": 1,
-        "tool": "Claude Sonnet",
-        "input": "requirements",
-        "output": "openapi_spec",
-        "notes": "Creates OpenAPI 3.0 specification"
+        "agent": "Claude",
+        "action": "scaffold_project",
+        "output": "Project structure + core files"
       },
       {
         "step": 2,
-        "tool": "Claude Sonnet",
-        "input": "openapi_spec",
-        "output": "fastapi_routes",
-        "notes": "Generates FastAPI route handlers"
+        "agent": "Claude",
+        "action": "generate_ui",
+        "output_format": "TSX",
+        "style": "functional over perfect"
+      },
+      {
+        "step": 3,
+        "agent": "Claude",
+        "action": "connect_backend",
+        "output": "Supabase integration"
       }
     ]
   },
-  "web3_dapp": {
-    "description": "Decentralized application with Bitcoin Ordinals/Runes",
+  "polish_and_ship": {
+    "id": "polish-ship",
+    "name": "Polish and Ship",
+    "description": "Final polish before deployment",
+    "trigger": "manual",
+    "mood": "flow",
     "steps": [
       {
         "step": 1,
-        "tool": "Claude Sonnet",
-        "input": "dapp_requirements",
-        "output": "architecture",
-        "notes": "Designs system architecture and data flow"
+        "agent": "Claude",
+        "action": "audit_accessibility",
+        "output": "a11y report"
       },
       {
         "step": 2,
-        "tool": "Claude Sonnet",
-        "input": "architecture",
-        "output": "frontend_components",
-        "notes": "Generates React/Astro components for wallet integration"
+        "agent": "Claude",
+        "action": "optimize_performance",
+        "checks": ["bundle size", "lazy loading", "image optimization"]
+      },
+      {
+        "step": 3,
+        "agent": "Claude",
+        "action": "add_seo",
+        "output": "meta tags, OG images, sitemap"
+      },
+      {
+        "step": 4,
+        "agent": "Bug Bot",
+        "action": "final_review"
       }
     ]
   }

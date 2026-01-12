@@ -1,49 +1,472 @@
 {
   "meta": {
-    "name": "Generative AI Multi-Tool System",
-    "version": "1.1.0",
-    "owner": "your-github-handle",
-    "intent": "Repo-aware, format-locked, multi-agent AI system for full-stack product creation",
-    "primary_consumer": "Claude Code"
-  },
-  "capability_layers": {
-    "foundations": {
-      "purpose": "Conceptual grounding",
-      "tools": ["DeepLearning.AI", "FastAI", "Google ML Crash Course"]
-    },
-    "data": {
-      "purpose": "Data preprocessing & feature engineering",
-      "tools": ["Pandas", "NumPy", "HuggingFace Datasets", "spaCy", "Roboflow"]
-    },
-    "llm": {
-      "purpose": "Core reasoning and generation",
-      "models": ["Claude Sonnet", "GPT-4", "Gemini Pro", "Mistral Large"],
-      "constraints": ["repo_aware", "format_locked"]
-    },
-    "multimodal": {
-      "image": ["Midjourney", "FLUX", "Stable Diffusion"],
-      "video": ["Runway", "Kling", "Sora"],
-      "audio": ["ElevenLabs"]
-    },
-    "rag": {
-      "vector_dbs": ["Pinecone", "Weaviate", "Chroma", "FAISS"],
-      "orchestration": ["LangChain", "LlamaIndex"]
-    },
-    "agents": {
-      "tools": ["Abacus AI Deep Agent"],
-      "capabilities": ["full_stack_generation", "repo_execution", "instant_deploy"]
-    },
-    "deployment": {
-      "tools": ["FastAPI", "Docker", "Kubernetes", "Vercel", "Modal", "Gradio"]
-    },
-    "governance": {
-      "tools": ["OpenAI Moderation API", "IBM AI Fairness 360", "SHAP", "LIME"]
-    }
+    "name": "AI Stack System",
+    "version": "3.0.0",
+    "companion": "Stack Sensei",
+    "description": "Repo-aware, format-locked AI system for full-stack development",
+    "author": "",
+    "created": "2026-01-12T09:53:40Z",
+    "updated": "2026-01-12T09:53:40Z"
   },
   "execution_rules": {
     "repo_aware": true,
     "format_locked_outputs": true,
     "no_markdown_by_default": true,
-    "single_format_per_response": true
+    "single_format_per_response": true,
+    "security_first": true
+  },
+  "repo_types": {
+    "frontend_repo": {
+      "output_formats": [
+        "TSX",
+        "HTML",
+        "CSS",
+        "JSON"
+      ],
+      "default_format": "TSX",
+      "context_prompt": "prompts/frontend.txt",
+      "description": "React/Next.js/Astro frontend projects"
+    },
+    "backend_repo": {
+      "output_formats": [
+        "JSON",
+        "SQL",
+        "TypeScript"
+      ],
+      "default_format": "JSON",
+      "context_prompt": "prompts/backend.txt",
+      "description": "API, database, server-side logic"
+    },
+    "design_repo": {
+      "output_formats": [
+        "CSS",
+        "SVG",
+        "JSON",
+        "TSX"
+      ],
+      "default_format": "CSS",
+      "context_prompt": "prompts/design.txt",
+      "description": "Design systems, animations, UI components"
+    },
+    "web3_repo": {
+      "output_formats": [
+        "TypeScript",
+        "JSON",
+        "YAML"
+      ],
+      "default_format": "TypeScript",
+      "context_prompt": "prompts/web3.txt",
+      "description": "Bitcoin, Ordinals, Runes, dApps"
+    },
+    "mobile_repo": {
+      "output_formats": [
+        "TSX",
+        "JSON"
+      ],
+      "default_format": "TSX",
+      "context_prompt": "prompts/mobile.txt",
+      "description": "React Native / Expo mobile apps"
+    },
+    "fullstack_repo": {
+      "output_formats": [
+        "TSX",
+        "JSON",
+        "SQL",
+        "TypeScript"
+      ],
+      "default_format": "TSX",
+      "context_prompt": "prompts/fullstack.txt",
+      "description": "Full-stack monorepo projects"
+    }
+  },
+  "capability_layers": {
+    "llm": {
+      "models": [
+        "Claude Sonnet",
+        "Claude Opus",
+        "GPT-4",
+        "Gemini Pro"
+      ],
+      "constraints": [
+        "repo_aware",
+        "format_locked"
+      ]
+    },
+    "multimodal": {
+      "image": [
+        "Midjourney",
+        "FLUX",
+        "Stable Diffusion"
+      ],
+      "video": [
+        "Runway",
+        "Kling",
+        "Sora"
+      ],
+      "audio": [
+        "ElevenLabs",
+        "Suno"
+      ],
+      "design": [
+        "Figma",
+        "Spline",
+        "Rive",
+        "Framer",
+        "Lottie"
+      ]
+    },
+    "rag": {
+      "vector_dbs": [
+        "Pinecone",
+        "Weaviate",
+        "Chroma",
+        "Supabase pgvector"
+      ],
+      "orchestration": [
+        "LangChain",
+        "LlamaIndex"
+      ]
+    },
+    "security": {
+      "code_review": [
+        "Bug Bot (Cursor)",
+        "GitHub Copilot Review"
+      ],
+      "backend_security": [
+        "Supabase RLS",
+        "JWT Auth",
+        "Edge Functions"
+      ],
+      "scanning": [
+        "Snyk",
+        "Dependabot",
+        "npm audit"
+      ],
+      "practices": [
+        "OWASP Top 10",
+        "Secure by Default"
+      ]
+    },
+    "agents": {
+      "coding": [
+        "Claude Code",
+        "Cursor",
+        "Windsurf",
+        "Cline"
+      ],
+      "research": [
+        "Perplexity",
+        "Deep Research"
+      ],
+      "automation": [
+        "n8n",
+        "Make",
+        "Zapier"
+      ]
+    }
+  },
+  "progression_system": {
+    "name": "Pizza Ranks",
+    "ranks": [
+      {
+        "name": "DOUGH",
+        "emoji": "🍞",
+        "range": [
+          0,
+          15
+        ],
+        "phase": "Setup & Scaffold"
+      },
+      {
+        "name": "SAUCE",
+        "emoji": "🍅",
+        "range": [
+          16,
+          35
+        ],
+        "phase": "Core Structure"
+      },
+      {
+        "name": "CHEESE",
+        "emoji": "🧀",
+        "range": [
+          36,
+          55
+        ],
+        "phase": "Styled & Functional"
+      },
+      {
+        "name": "TOPPINGS",
+        "emoji": "🍕",
+        "range": [
+          56,
+          75
+        ],
+        "phase": "Features Complete"
+      },
+      {
+        "name": "OVEN",
+        "emoji": "🔥",
+        "range": [
+          76,
+          90
+        ],
+        "phase": "Testing & Polish"
+      },
+      {
+        "name": "MASTERPIECE",
+        "emoji": "🏆",
+        "range": [
+          91,
+          100
+        ],
+        "phase": "Deployed & Launched"
+      }
+    ]
+  },
+  "creative_moods": {
+    "fire": {
+      "emoji": "🔥",
+      "energy": "high",
+      "focus": "Ship fast, MVPs, hackathons"
+    },
+    "flow": {
+      "emoji": "🧘",
+      "energy": "deep",
+      "focus": "Craftsmanship, polish, details"
+    },
+    "lab": {
+      "emoji": "🧪",
+      "energy": "curious",
+      "focus": "Learning, experiments, prototypes"
+    },
+    "mission": {
+      "emoji": "🎯",
+      "energy": "focused",
+      "focus": "Clear goals, execution, deadlines"
+    },
+    "drift": {
+      "emoji": "🌊",
+      "energy": "relaxed",
+      "focus": "Exploration, no pressure, play"
+    }
+  },
+  "project_types": {
+    "websites": {
+      "portfolio": {
+        "code": "A",
+        "stack": [
+          "Astro",
+          "Tailwind"
+        ]
+      },
+      "ecommerce": {
+        "code": "B",
+        "stack": [
+          "Next.js",
+          "Supabase",
+          "Stripe"
+        ]
+      },
+      "blog": {
+        "code": "C",
+        "stack": [
+          "Astro",
+          "MDX"
+        ]
+      },
+      "landing": {
+        "code": "D",
+        "stack": [
+          "Astro",
+          "Tailwind"
+        ]
+      },
+      "webgl": {
+        "code": "E",
+        "stack": [
+          "Next.js",
+          "Three.js",
+          "GSAP"
+        ]
+      },
+      "web3": {
+        "code": "F",
+        "stack": [
+          "Next.js",
+          "Supabase",
+          "Unisat"
+        ]
+      }
+    },
+    "mobile": {
+      "utility": {
+        "code": "G",
+        "stack": [
+          "Expo",
+          "Zustand",
+          "Supabase"
+        ]
+      },
+      "creative": {
+        "code": "H",
+        "stack": [
+          "Expo",
+          "Skia"
+        ]
+      },
+      "wallet": {
+        "code": "I",
+        "stack": [
+          "Expo",
+          "Zustand",
+          "Unisat API"
+        ]
+      },
+      "social": {
+        "code": "J",
+        "stack": [
+          "Expo",
+          "Supabase Realtime"
+        ]
+      },
+      "game": {
+        "code": "K",
+        "stack": [
+          "Expo",
+          "Skia",
+          "Zustand"
+        ]
+      }
+    },
+    "other": {
+      "components": {
+        "code": "L",
+        "stack": [
+          "React",
+          "Storybook",
+          "Tailwind"
+        ]
+      },
+      "ai_tool": {
+        "code": "M",
+        "stack": [
+          "Next.js",
+          "Claude API"
+        ]
+      },
+      "surprise": {
+        "code": "N",
+        "stack": [
+          "random"
+        ]
+      }
+    }
+  },
+  "design_styles": {
+    "modern": {
+      "minimalist": {
+        "id": 1,
+        "emoji": "⬜",
+        "tools": [
+          "Tailwind",
+          "CSS"
+        ]
+      },
+      "gradient": {
+        "id": 2,
+        "emoji": "🌈",
+        "tools": [
+          "Tailwind",
+          "CSS Gradients"
+        ]
+      },
+      "glassmorphism": {
+        "id": 3,
+        "emoji": "🪟",
+        "tools": [
+          "Tailwind",
+          "backdrop-filter"
+        ]
+      },
+      "neubrutalism": {
+        "id": 4,
+        "emoji": "🧱",
+        "tools": [
+          "Tailwind",
+          "Bold Typography"
+        ]
+      }
+    },
+    "expressive": {
+      "hand_drawn": {
+        "id": 5,
+        "emoji": "✏️",
+        "tools": [
+          "SVG",
+          "Lottie"
+        ]
+      },
+      "genz": {
+        "id": 6,
+        "emoji": "🎪",
+        "tools": [
+          "Framer Motion",
+          "Bold Colors"
+        ]
+      },
+      "retro": {
+        "id": 7,
+        "emoji": "🕹️",
+        "tools": [
+          "Pixel Fonts",
+          "CSS"
+        ]
+      },
+      "dark_luxury": {
+        "id": 8,
+        "emoji": "🌑",
+        "tools": [
+          "Dark Mode",
+          "Subtle Gradients"
+        ]
+      }
+    },
+    "immersive": {
+      "3d_interactive": {
+        "id": 9,
+        "emoji": "🌐",
+        "tools": [
+          "Three.js",
+          "Spline",
+          "R3F"
+        ]
+      },
+      "motion_heavy": {
+        "id": 10,
+        "emoji": "🎬",
+        "tools": [
+          "GSAP",
+          "Lenis",
+          "Framer Motion"
+        ]
+      },
+      "gamified": {
+        "id": 11,
+        "emoji": "🎮",
+        "tools": [
+          "Canvas",
+          "Game Loop"
+        ]
+      },
+      "experimental": {
+        "id": 12,
+        "emoji": "🔮",
+        "tools": [
+          "Custom",
+          "Break Rules"
+        ]
+      }
+    }
   }
 }

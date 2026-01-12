@@ -1,59 +1,44 @@
-# AI Stack System
+# 🍕 AI Stack System
 
-A repo-aware, format-locked, multi-agent AI system for deterministic full-stack product creation.
+> Your repo-aware, format-locked AI development companion with Stack Sensei.
 
 ## Quick Start
 
-1. Clone this repo alongside your project repos
-2. Reference `ai-stack.manifest.json` in your AI tool configuration
-3. Use prompt templates from `/prompts` for context-specific generation
+```bash
+# Copy the root prompt
+cat ROOT_PROMPT.txt | pbcopy  # macOS
+cat ROOT_PROMPT.txt | xclip   # Linux
 
-## File Authority
-
-| File Type | Purpose | Authority |
-|-----------|---------|-----------|
-| `*.json` | System configuration | **Machine truth** |
-| `*.txt` | Prompt templates | Context overrides |
-| `*.md` | Documentation | Human reference |
-
-## Directory Structure
-
-```
-ai-stack-system/
-├── ai-stack.manifest.json    # Primary system truth
-├── claude.system.prompt.txt  # Anti-hallucination rules
-├── config/
-│   ├── repo-capability-map.json   # Output formats per repo type
-│   └── workflows.json             # Multi-tool pipelines
-├── prompts/
-│   ├── frontend.txt    # TSX/React context
-│   ├── backend.txt     # API/JSON context
-│   ├── rag.txt         # Python/RAG context
-│   ├── infra.txt       # DevOps/YAML context
-│   └── web3.txt        # Bitcoin/Ordinals context
-└── docs/
-    └── architecture.md  # System design reference
+# Paste into Claude and start building!
 ```
 
-## Supported Repo Types
+## Features
 
-- **frontend_repo**: TSX, HTML, CSS outputs
-- **backend_repo**: JSON, SQL outputs
-- **fullstack_monorepo**: TSX, JSON, SQL outputs
-- **rag_repo**: Python, JSON outputs
-- **infra_repo**: YAML, Dockerfile, HCL outputs
-- **web3_repo**: TypeScript, JSON, YAML outputs
+- 🎨 **5 Creative Moods** — Fire, Flow, Lab, Mission, Drift
+- 🏗️ **14 Project Types** — Websites, Apps, Web3, AI Tools
+- 🎨 **12 Design Styles** — Minimalist to Experimental
+- 🍕 **Pizza Rank System** — Track progress to MASTERPIECE
+- 🔐 **Security-First** — Bug Bot, Supabase RLS, OWASP
 
-## Usage with Claude Code
+## Commands
 
-Point Claude to `ai-stack.manifest.json` as the first file to read. The execution rules will constrain outputs to defined formats only.
+| Command | Action |
+|---------|--------|
+| `status` | Current rank |
+| `next` | Next task |
+| `checkpoint` | Save progress |
+| `wrap up` | End session |
 
-## Execution Rules
+## Structure
 
-- `repo_aware`: Output format determined by active repo type
-- `format_locked_outputs`: Single format per response
-- `no_markdown_by_default`: Raw code unless explicitly requested
-- `single_format_per_response`: No mixed outputs
+```
+├── ROOT_PROMPT.txt          ← Start here
+├── ai-stack.manifest.json   ← System config
+├── config/                  ← JSON configs
+├── prompts/                 ← Context prompts
+├── templates/               ← Project templates
+└── projects/                ← Your tracked projects
+```
 
 ## License
 

@@ -1,0 +1,103 @@
+{
+  "website_stacks": {
+    "portfolio_minimal": {
+      "framework": "Astro",
+      "styling": "Tailwind",
+      "animation": "CSS only",
+      "backend": "None",
+      "deployment": "Vercel"
+    },
+    "portfolio_animated": {
+      "framework": "Next.js",
+      "styling": "Tailwind",
+      "animation": "Framer Motion + GSAP",
+      "backend": "None",
+      "deployment": "Vercel"
+    },
+    "ecommerce": {
+      "framework": "Next.js",
+      "styling": "Tailwind",
+      "animation": "Framer Motion",
+      "backend": "Supabase",
+      "payments": "Stripe",
+      "deployment": "Vercel"
+    },
+    "blog_content": {
+      "framework": "Astro",
+      "styling": "Tailwind",
+      "content": "MDX",
+      "backend": "None",
+      "deployment": "Vercel"
+    },
+    "landing_page": {
+      "framework": "Astro",
+      "styling": "Tailwind",
+      "animation": "CSS + minimal JS",
+      "backend": "None",
+      "deployment": "Vercel"
+    },
+    "webgl_experience": {
+      "framework": "Next.js",
+      "styling": "Tailwind",
+      "3d": "Three.js / React Three Fiber",
+      "animation": "GSAP",
+      "deployment": "Vercel"
+    },
+    "web3_dapp": {
+      "framework": "Next.js",
+      "styling": "Tailwind",
+      "animation": "Framer Motion",
+      "backend": "Supabase",
+      "web3": "Unisat API",
+      "deployment": "Vercel"
+    }
+  },
+  "mobile_stacks": {
+    "utility_app": {
+      "framework": "Expo",
+      "styling": "NativeWind",
+      "state": "Zustand",
+      "backend": "Supabase",
+      "deployment": "EAS"
+    },
+    "crypto_wallet": {
+      "framework": "Expo",
+      "styling": "NativeWind",
+      "state": "Zustand",
+      "backend": "Supabase",
+      "web3": "Unisat API",
+      "deployment": "EAS"
+    },
+    "social_app": {
+      "framework": "Expo",
+      "styling": "NativeWind",
+      "state": "Zustand",
+      "backend": "Supabase",
+      "realtime": "Supabase Realtime",
+      "deployment": "EAS"
+    }
+  },
+  "common_packages": {
+    "frontend": [
+      "@tanstack/react-query",
+      "zustand",
+      "zod",
+      "clsx",
+      "tailwind-merge"
+    ],
+    "animation": [
+      "framer-motion",
+      "gsap",
+      "@studio-freight/lenis"
+    ],
+    "backend": [
+      "@supabase/supabase-js",
+      "@supabase/ssr"
+    ],
+    "dev": [
+      "typescript",
+      "eslint",
+      "prettier"
+    ]
+  }
+}
